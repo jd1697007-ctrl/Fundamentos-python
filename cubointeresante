@@ -1,0 +1,21 @@
+def es_cubo_interesante(numero):
+    original = numero
+    suma_cubos = 0
+    
+    while numero > 0:
+        digito = numero % 10                    
+        suma_cubos = suma_cubos + (digito ** 3) 
+        numero = numero // 10                   
+        
+    if suma_cubos == original:
+        return 1
+    else:
+        return 0
+
+num = int(input("Ingrese un número: "))
+resultado = es_cubo_interesante(num)
+
+if resultado == 1:
+    print("ES un cubo interesante")
+else:
+    print("NO es un cubo interesante")
